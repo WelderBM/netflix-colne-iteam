@@ -1,0 +1,405 @@
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+    background: transparent;
+}
+
+header.notOnTop {
+    background-color: var(--black);
+}
+
+main {
+    max-width: 1440px;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.first-nav>ul {
+    display: flex;
+    gap: 1.5rem;
+
+    list-style: none;
+
+    font-size: .875rem;
+}
+
+.first-nav>ul>li {
+    color: var(--white-smoke);
+    cursor: pointer;
+}
+
+.first-nav>ul>li:active,
+.first-nav>ul>li:hover {
+    color: var(--white);
+}
+
+
+footer>div {
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.icons {
+    gap: 1.25rem;
+}
+
+.icons img {
+    cursor: pointer;
+}
+
+#footer-links {
+    display: flex;
+    gap: 9.375rem;
+}
+
+#footer-links ul {
+    display: flex;
+    gap: 1.25rem;
+}
+
+#footer-links li {
+    cursor: pointer;
+    list-style: none;
+    font-size: .8125rem;
+}
+
+#service {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: .8125rem;
+}
+
+#rights {
+    font-size: .6875rem;
+}
+
+#footer-links li,
+#service>p,
+#rights {
+    color: var(--gray);
+}
+
+
+#footer-links li:hover,
+#service>p:hover,
+#rights:hover {
+    color: var(--white);
+}
+
+/*
+a partir daqui
+é sobre o main da netflix
+sobre
+*/
+
+.poster-container {
+    width: 100%;
+    height: 50rem;
+    background-image: url('../assets/posters/MoviePoster.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #333;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 12.5rem 4rem 0 4rem;
+    gap: 1.25em;
+    max-width: 41.25rem ;
+}
+
+.hero-container>img {
+    width: 25rem;
+}
+
+.hero-container>#top-ranking {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-container>#top-ranking>p {
+    font-size: 1.875rem;
+}
+
+.hero-container>#description {
+    font-size: 1.625rem;
+}
+
+#buttons-container {
+    display: flex;
+    gap: 1.25rem;
+}
+
+#play-button,
+#more-info-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.25rem;
+    font-size: 1.375rem;
+}
+
+#play-button:hover,
+#more-info-button:hover {
+    opacity: 0.6;
+}
+
+#play-button {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#more-info-button {
+    background-color: var(--white-transparent);
+}
+
+/*
+a partir daqui
+
+PRIMEIRA SECTION
+*/
+
+#carrossels-container {
+    transform: translateY(-9rem);
+}
+
+#carrossels-container {
+    gap: 2.5rem;
+    padding-left: 2rem;
+}
+
+#rank-movies > .row {
+    padding: 2rem 0;
+}
+#rank-movies  {
+    gap: 2rem;
+}
+
+.corrossel>h3,#rank-movies>h3 {
+    font-size: 2rem;
+    color: var(--white-smoke);
+}
+
+.corrossel .row {
+    gap: 0.5rem;
+}
+
+.left-arrow { left: 0; }
+.arrow-right { right: 0; }
+
+.hidden {
+  display: none;
+}
+.card-ranking {
+  display: flex;
+  align-items: flex-end; /* Alinha o número e o poster pela base */
+  position: relative;
+  flex-shrink: 0; /* Impede que o card esmague para caber na tela */
+  width: 3 00px; /* Ajuste conforme o tamanho do seu poster */
+  height: 250px; 
+  cursor: pointer;
+}
+
+/* O container do número (a imagem Rank-01, etc) */
+.card-ranking div {
+  width: 100%; /* Ocupa metade do card */
+  height: 100%;
+  z-index: 1; /* Garante que o número fique visível */
+  margin-right: -10px; /* Faz o poster sobrepor levemente o número */
+}
+
+.card-ranking div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que o número não distorça */
+}
+
+/* O Poster do Filme */
+.card-ranking > img {
+  width: 70%; /* Ajuste a largura para o poster não sumir */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  z-index: 2; /* Fica acima do número */
+}
+
+.corrossel .row,
+#rank-movies>.row {
+    position: relative;
+}
+
+.corrossel img {
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.corrossel img:hover,
+.card-ranking:hover {
+    transform: scale(1.2);
+}
+
+.arrow-right,
+.left-arrow {
+    position: absolute;
+    top: calc(50% - 16px);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+}
+.slider-wrapper:hover .arrow-right,
+.slider-wrapper:hover .left-arrow {
+    opacity: 1;
+}
+
+.progress {
+    width: 10rem;
+    height: 3px;
+    margin: 0.5rem auto 0 auto;
+    background-color: var(--mid-gray);
+}
+
+.red-percentage {
+    height: 100%;
+    background-color: var(--red);
+}
+
+.primeiro {
+    width: 80%;
+}
+
+.segundo {
+    width: 50%;
+}
+
+.terceiro {
+    width: 30%;
+}
+
+.quarto {
+    width: 90%;
+}
+
+.quinto {
+    width: 20%;
+}
+
+.card-ranking {
+    gap: 0;
+}
+
+.card-ranking>div>img {
+    transform: translateX(1rem);
+}
+
+.card-ranking>img {
+    z-index: 2;
+}
+
+.left-type>.row {
+    transform: translateX(-12rem);
+}
+
+/* Container que segura as setas e a row */
+.slider-wrapper {
+  position: relative;
+  width: 100%; /* Ocupa a largura do pai */
+  max-width: 100vw; /* Garante que não passe da largura da tela */
+  overflow: hidden; /* "Corta" o que sair das bordas do wrapper */
+  box-sizing: border-box;
+}
+
+.corrossel .row {
+    display: flex;
+    overflow-x: auto; /* Permite o scroll */
+    scroll-behavior: smooth; /* Movimento suave nos cliques */
+    gap: 0.5rem;
+    scrollbar-width: none; /* Esconde barra no Firefox */
+    -ms-overflow-style: none;  /* Esconde barra no IE/Edge */
+    padding: 2rem 0; /* Evita que o hover scale(1.2) corte a imagem */
+    cursor: grab;
+}
+
+.corrossel .row::-webkit-scrollbar {
+    display: none; /* Esconde barra no Chrome/Safari */
+}
+
+.corrossel .row:active {
+    cursor: grabbing;
+}
+
+/* Estilização das Setas */
+.arrow-right, .left-arrow {
+    position: absolute;
+    z-index: 10;
+    width: 4rem;
+    height: calc(100% - 4rem);
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    top: 2rem;
+}
+
+.corrossel img {
+    user-select: none;
+    -webkit-user-drag: none;
+} 
+
+.slider-wrapper:hover .arrow-right,
+.slider-wrapper:hover .left-arrow {
+    opacity: 1;
+}
+
+.arrow-right { right: 0; }
+.left-arrow { left: 0; }
+
+.hidden {
+    display: none !important;
+}   
+
+#rank-movies>.left-arrow, #rank-movies>.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  height: 100%; /* Seta ocupando a altura toda ajuda no clique */
+  width: 40px;
+}
+
+/* responsividade */
+
+@media (max-width: 1440px) {
+    main {
+        max-width: 100%;
+    }
+
+    .hero-container {
+        padding: 12.5rem 2rem 0 2rem;
+        width: 100%;
+    }
+}

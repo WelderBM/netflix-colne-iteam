@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'NetflixSans';
+    src: url('./fonts/netflix-sans/') format('woff2');
+}
+
+:root {
+    --white: #fff;
+    --white-transparent: rgb(255, 255, 255, 0.3);
+    --white-smoke: #E5E5E5;
+    --mid-gray: rgba(109, 109, 110, 0.7);
+    --gray: #808080;
+    --black: #141414;
+    --red: #B9090B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NetflixSans', sans-serif;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--white);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--black);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--black);
+    padding: 1.5rem 3.75rem;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: var(--black);
+    padding: 2rem 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.card-profile:hover>img,
+#add-perfil>div>img:hover,
+#gerenciate:hover,
+#service:hover,
+.icons img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

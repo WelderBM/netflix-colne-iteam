@@ -1,0 +1,58 @@
+main {
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 400
+}
+
+main>div {
+    gap: 3rem;
+}
+
+.card-profile {
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card-profile>img {
+    width: 200px;
+    height: 200px;
+}
+
+.card-profile>p {
+    color: #6D6D6E;
+    font-weight: 400
+}
+
+#add-perfil {
+    flex-direction: column;
+}
+
+#add-perfil>div {
+    width: 200px;
+    height: 200px;
+}
+
+#add-perfil>div>img {
+    border-radius: 50%;
+}
+
+#gerenciate {
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--gray);
+}
+
+#gerenciate>p {
+    color: var(--gray);
+}
+
+#gerenciate,
+.card-profile {
+    cursor: pointer;
+}
