@@ -3,31 +3,41 @@ main {
     margin: 0 auto;
     height: 100vh;
     gap: 2rem;
+    max-width: 1440px;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3.5vw;
     color: var(--white);
-    font-weight: 400
+    font-weight: 400;
 }
 
 main>div {
     gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-profile {
     flex-direction: column;
     gap: 1.25rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .card-profile>img {
-    width: 200px;
-    height: 200px;
+    width: clamp(100px, 15vw, 200px);
+    height: clamp(100px, 15vw, 200px);
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .card-profile>p {
     color: #6D6D6E;
-    font-weight: 400
+    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 #add-perfil {
@@ -35,24 +45,45 @@ main>div {
 }
 
 #add-perfil>div {
-    width: 200px;
-    height: 200px;
+    width: clamp(100px, 15vw, 200px);
+    height: clamp(100px, 15vw, 200px);
+    background-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #add-perfil>div>img {
-    border-radius: 50%;
+    width: 50%;
 }
 
 #gerenciate {
     padding: 0.75rem 2rem;
     border: 1px solid var(--gray);
+    margin-top: 2rem;
 }
 
 #gerenciate>p {
     color: var(--gray);
+    letter-spacing: 2px;
 }
 
 #gerenciate,
 .card-profile {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main>div {
+        gap: 1.5rem;
+    }
+
+    #gerenciate {
+        padding: 0.5rem 1.5rem;
+    }
 }

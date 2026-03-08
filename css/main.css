@@ -55,7 +55,10 @@ footer>div {
 
 #footer-links {
     display: flex;
-    gap: 9.375rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #footer-links ul {
@@ -116,7 +119,7 @@ sobre
     align-items: start;
     padding: 12.5rem 4rem 0 4rem;
     gap: 1.25em;
-    max-width: 41.25rem ;
+    max-width: 41.25rem;
 }
 
 .hero-container>img {
@@ -183,62 +186,81 @@ PRIMEIRA SECTION
 
 #carrossels-container {
     gap: 2.5rem;
-    padding-left: 2rem;
+    padding-left: 4rem;
 }
 
-#rank-movies > .row {
+#rank-movies>.row {
     padding: 2rem 0;
 }
-#rank-movies  {
+
+#rank-movies {
     gap: 2rem;
 }
 
-.corrossel>h3,#rank-movies>h3 {
+.corrossel>h3,
+#rank-movies>h3 {
     font-size: 2rem;
     color: var(--white-smoke);
 }
 
-.corrossel .row {
+.corrossel .row,
+#rank-movies .row {
+    display: flex;
     gap: 0.5rem;
 }
 
-.left-arrow { left: 0; }
-.arrow-right { right: 0; }
+.left-arrow {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
 
 .hidden {
-  display: none;
+    display: none;
 }
+
 .card-ranking {
-  display: flex;
-  align-items: flex-end; /* Alinha o número e o poster pela base */
-  position: relative;
-  flex-shrink: 0; /* Impede que o card esmague para caber na tela */
-  width: 3 00px; /* Ajuste conforme o tamanho do seu poster */
-  height: 250px; 
-  cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    /* Alinha o número e o poster pela base */
+    position: relative;
+    flex-shrink: 0;
+    /* Impede que o card esmague para caber na tela */
+    width: 300px;
+    /* Ajuste conforme o tamanho do seu poster */
+    height: 250px;
+    cursor: pointer;
 }
 
 /* O container do número (a imagem Rank-01, etc) */
 .card-ranking div {
-  width: 100%; /* Ocupa metade do card */
-  height: 100%;
-  z-index: 1; /* Garante que o número fique visível */
-  margin-right: -10px; /* Faz o poster sobrepor levemente o número */
+    width: 100%;
+    /* Ocupa metade do card */
+    height: 100%;
+    z-index: 1;
+    /* Garante que o número fique visível */
+    margin-right: -10px;
+    /* Faz o poster sobrepor levemente o número */
 }
 
 .card-ranking div img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Garante que o número não distorça */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Garante que o número não distorça */
 }
 
 /* O Poster do Filme */
-.card-ranking > img {
-  width: 70%; /* Ajuste a largura para o poster não sumir */
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-  z-index: 2; /* Fica acima do número */
+.card-ranking>img {
+    width: 70%;
+    /* Ajuste a largura para o poster não sumir */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    z-index: 2;
+    /* Fica acima do número */
 }
 
 .corrossel .row,
@@ -266,6 +288,7 @@ PRIMEIRA SECTION
     opacity: 0;
     z-index: 3;
 }
+
 .slider-wrapper:hover .arrow-right,
 .slider-wrapper:hover .left-arrow {
     opacity: 1;
@@ -321,26 +344,36 @@ PRIMEIRA SECTION
 
 /* Container que segura as setas e a row */
 .slider-wrapper {
-  position: relative;
-  width: 100%; /* Ocupa a largura do pai */
-  max-width: 100vw; /* Garante que não passe da largura da tela */
-  overflow: hidden; /* "Corta" o que sair das bordas do wrapper */
-  box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    /* Ocupa a largura do pai */
+    max-width: 100vw;
+    /* Garante que não passe da largura da tela */
+    overflow: hidden;
+    /* "Corta" o que sair das bordas do wrapper */
+    box-sizing: border-box;
 }
 
-.corrossel .row {
+.corrossel .row,
+#rank-movies .row {
     display: flex;
-    overflow-x: auto; /* Permite o scroll */
-    scroll-behavior: smooth; /* Movimento suave nos cliques */
+    overflow-x: auto;
+    /* Permite o scroll */
+    scroll-behavior: smooth;
+    /* Movimento suave nos cliques */
     gap: 0.5rem;
-    scrollbar-width: none; /* Esconde barra no Firefox */
-    -ms-overflow-style: none;  /* Esconde barra no IE/Edge */
-    padding: 2rem 0; /* Evita que o hover scale(1.2) corte a imagem */
+    scrollbar-width: none;
+    /* Esconde barra no Firefox */
+    -ms-overflow-style: none;
+    /* Esconde barra no IE/Edge */
+    padding: 2rem 0;
+    /* Evita que o hover scale(1.2) corte a imagem */
     cursor: grab;
 }
 
 .corrossel .row::-webkit-scrollbar {
-    display: none; /* Esconde barra no Chrome/Safari */
+    display: none;
+    /* Esconde barra no Chrome/Safari */
 }
 
 .corrossel .row:active {
@@ -348,50 +381,83 @@ PRIMEIRA SECTION
 }
 
 /* Estilização das Setas */
-.arrow-right, .left-arrow {
+.arrow-right,
+.left-arrow {
     position: absolute;
     z-index: 10;
-    width: 4rem;
+    width: 3rem;
+    /* Diminuído de 4rem */
     height: calc(100% - 4rem);
-    background: rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: all 0.4s ease;
     top: 2rem;
 }
 
-.corrossel img {
+.left-arrow {
+    left: 0;
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.arrow-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.arrow-right img,
+.left-arrow img {
+    width: 1.5rem;
+    /* Ícones menores */
+    transition: transform 0.2s ease;
+}
+
+.arrow-right:hover img {
+    transform: scale(1.2);
+}
+
+.left-arrow:hover img {
+    transform: scale(1.2);
+}
+
+.corrossel img,
+.card-ranking img {
     user-select: none;
     -webkit-user-drag: none;
-} 
+}
 
 .slider-wrapper:hover .arrow-right,
 .slider-wrapper:hover .left-arrow {
     opacity: 1;
 }
 
-.arrow-right { right: 0; }
-.left-arrow { left: 0; }
 
 .hidden {
     display: none !important;
-}   
-
-#rank-movies>.left-arrow, #rank-movies>.arrow-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-  background: rgba(0,0,0,0.5);
-  height: 100%; /* Seta ocupando a altura toda ajuda no clique */
-  width: 40px;
 }
 
-/* responsividade */
+#rank-movies>.left-arrow,
+#rank-movies>.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    height: 100%;
+    width: 3rem;
+}
+
+#rank-movies>.left-arrow {
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+#rank-movies>.arrow-right {
+    background: linear-gradient(to left, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+/* Responsividade */
 
 @media (max-width: 1440px) {
     main {
@@ -401,5 +467,156 @@ PRIMEIRA SECTION
     .hero-container {
         padding: 12.5rem 2rem 0 2rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 10rem 2rem 0 2rem;
+        max-width: 80%;
+    }
+
+    .hero-container>img {
+        width: 20rem;
+    }
+
+    .hero-container>#top-ranking>p,
+    .hero-container>#description {
+        font-size: 1.25rem;
+    }
+
+    #carrossels-container {
+        transform: translateY(-5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        gap: 1.5rem;
+        padding: 1rem 6% !important; /* Mais respiro lateral */
+    }
+
+    .first-nav {
+        display: none;
+    }
+
+    .second-nav p {
+        display: none;
+    }
+
+    .poster-container {
+        height: 38rem; /* Aumentado para dar mais respiro vertical */
+    }
+
+    .hero-container {
+        padding: 10rem 6% 0 6%; /* Mais respiro */
+        max-width: 100%;
+        gap: 1.25rem;
+    }
+
+    .hero-container>img {
+        width: 18rem;
+    }
+
+    .hero-container>#top-ranking>p {
+        font-size: 1.1rem;
+    }
+
+    .hero-container>#description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    #play-button,
+    #more-info-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.1rem;
+        gap: 0.5rem;
+    }
+
+    #play-button img,
+    #more-info-button img {
+        width: 1.2rem;
+    }
+
+    #carrossels-container {
+        transform: translateY(-4rem);
+        gap: 2.5rem; /* Mais espaço entre carrosséis */
+        padding-left: 6%; /* Alinhado com o hero */
+    }
+
+    .corrossel>h3,
+    #rank-movies>h3 {
+        font-size: 1.3rem;
+    }
+
+    .arrow-right,
+    .left-arrow {
+        display: none !important;
+    }
+
+    #footer-links {
+        gap: 2rem;
+    }
+
+    #footer-links div {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 8% !important;
+    }
+
+    .poster-container {
+        height: 38rem;
+    }
+
+    .hero-container {
+        padding: 8rem 8% 0 8%;
+        gap: 1.25rem;
+    }
+
+    .hero-container>img {
+        width: 14rem;
+    }
+
+    #description {
+        font-size: 1rem;
+        -webkit-line-clamp: 4; /* Limitar linhas para não sufocar */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    #buttons-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    #buttons-container button {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    #carrossels-container {
+        transform: translateY(-2rem);
+        padding-left: 8%;
+        gap: 2.5rem;
+    }
+
+    footer>div {
+        padding: 0 4%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-links {
+        justify-content: center;
+        text-align: left;
     }
 }

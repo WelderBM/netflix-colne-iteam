@@ -35,10 +35,17 @@ body {
 
 header {
     background-color: var(--black);
-    padding: 1.5rem 3.75rem;
+    padding: 1.5rem 4%;
     width: 100%;
+    max-width: 1440px;
     position: fixed;
     z-index: 99;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
 }
 
 .centralize {
@@ -58,11 +65,18 @@ header {
 
 footer {
     background-color: var(--black);
-    padding: 2rem 3.75rem;
+    padding: 2rem 4%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    max-width: 1440px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1.5rem;
+    }
 }
 
 .card-profile:hover>img,
