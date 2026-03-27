@@ -32,6 +32,22 @@ O grande feito técnico está na implementação do **drag-to-scroll** (arrastar
 
 > Um clone não é apenas copiar visual — é dissecar uma interface de classe mundial e entender cada decisão de interação e layout.
 
+### Screenshots
+
+<div align="center">
+
+**Tela de Seleção de Perfis**
+
+![Tela de login — seleção de perfis](print-login.png)
+
+<br/>
+
+**Página Principal — Carrosséis e Hero Banner**
+
+<img src="print-site.png" alt="Página principal com carrosséis" width="480"/>
+
+</div>
+
 ### Funcionalidades
 
 - [x] Tela de seleção de perfis com múltiplos usuários
@@ -210,6 +226,22 @@ Desenvolvido por **Welder Barroso de Melo**
 The standout technical achievement is the **drag-to-scroll** implementation on the carousels — the same interaction pattern used by major streaming platforms, recreated here without any external library.
 
 > A clone isn't just copying visuals — it's dissecting a world-class interface and understanding every interaction and layout decision.
+
+### Screenshots
+
+<div align="center">
+
+**Profile Selection Screen**
+
+![Profile selection screen](print-login.png)
+
+<br/>
+
+**Main Page — Carousels & Hero Banner**
+
+<img src="print-site.png" alt="Main page with carousels" width="480"/>
+
+</div>
 
 ### Features
 
